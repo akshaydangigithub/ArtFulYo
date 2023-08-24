@@ -6,6 +6,9 @@ import Login from './components/LoginPage';
 import Home from './components/HomePage';
 import Timer from './components/TimePage';
 import DemoTittle from './components/DemoTittle';
+import AllCards from './components/AllCards';
+import AllVoiceMemo from './components/AllVoiceMemo';
+import AddNotes from './components/AddNotes';
 
 const Stack = createStackNavigator();
 
@@ -15,9 +18,28 @@ function App(): JSX.Element {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="home" component={Home} />
-          <Stack.Screen name="timer" component={Timer} />
-          <Stack.Screen name="demotittle" component={DemoTittle} />
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Timer" component={Timer} />
+          <Stack.Screen
+            name="demotittle"
+            component={DemoTittle}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Allnotes"
+            component={AllCards}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="AllVoiceMemo"
+            component={AllVoiceMemo}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="AddNotes"
+            component={AddNotes}
+            options={{headerShown: false}}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>

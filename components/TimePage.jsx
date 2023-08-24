@@ -1,27 +1,31 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {View, StyleSheet, ScrollView, Image} from 'react-native';
 import TimerComponent from './Timer';
 import FlashLight from './Flashlight';
 
 const Timer = () => {
   return (
-    <View style={styles.main}>
-      <View style={styles.image_main}>
-        <Image style={styles.image} source={require('../images/time.jpg')} />
+    <ScrollView contentContainerStyle={styles.scrollViewContent}>
+      <View style={styles.main}>
+        <View style={styles.image_main}>
+          <Image style={styles.image} source={require('../images/time.jpg')} />
+        </View>
+        <TimerComponent name="Timer" time="04:00:59" />
+        <FlashLight />
       </View>
-      <TimerComponent />
-      <FlashLight />
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  scrollViewContent: {
+    flexGrow: 1,
+  },
   main: {
     flex: 1,
     padding: 10,
     backgroundColor: '#fff',
+    minHeight: '100%',
   },
   image_main: {
     height: '45%',

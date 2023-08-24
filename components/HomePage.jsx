@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Card from './Card';
+import Card from './CardMain';
 import VoiceMemo from './VoiceMemo';
 
 const Home = ({navigation}) => {
@@ -10,8 +10,8 @@ const Home = ({navigation}) => {
     <ScrollView>
       <View style={styles.main}>
         {/* <Card card1="#7fff9d" card2='#e9ff70' card3='#ffb496' card4='#ffb496' /> */}
-        <Card card1="#fff" card2="#fff" card3="#fff" card4="#fff" />
-        <VoiceMemo />
+        <Card card1="#fff" card2="#fff" card3="#fff" card4="#fff" navigation={navigation} />
+        <VoiceMemo navigation={navigation} />
         <View style={styles.main_inner3}>
           <Text style={styles.performance}>Performance Mode</Text>
           <View style={styles.btm_btn}>
@@ -21,7 +21,7 @@ const Home = ({navigation}) => {
               <Text style={styles.buttonText}>Host</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => navigation.navigate('timer')}
+              onPress={() => navigation.navigate('Timer')}
               style={styles.btm_btn1}>
               <Text style={styles.buttonText}>Artist</Text>
             </TouchableOpacity>

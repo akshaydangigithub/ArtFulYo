@@ -1,12 +1,12 @@
 import {Text, View, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const TimerComponent = () => {
+const TimerComponent = ({name, time}) => {
   return (
     <View style={styles.card_main}>
-      <Text style={styles.timer_text}>Timer</Text>
+      <Text style={styles.timer_text}>{name}</Text>
       <View style={styles.card}>
-        <Text style={styles.timer}>00:00:00</Text>
+        <Text style={styles.timer}>{time}</Text>
         <View style={styles.icon_div}>
           <View style={styles.icon_div1}>
             <Icon name="storefront-outline" color="black" size={26} />

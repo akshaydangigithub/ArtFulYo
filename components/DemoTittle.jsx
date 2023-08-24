@@ -1,23 +1,24 @@
 import {Text, View, StyleSheet} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Card from './Card';
-import Timer from './TimePage';
-import FlashLight from './Flashlight';
+import Card from './CardMain';
+import Timer from './Timer';
+import RandomWord from './RandomWord';
 
-const DemoTittle = () => {
+const DemoTittle = ({navigation}) => {
   return (
     <>
       <ScrollView>
         <View style={styles.main}>
           <Card
-            card1="#7fff9d"
+            card1="#ffb496"
             card2="#e9ff70"
-            card3="#ffb496"
+            card3="#7fff9d"
             card4="#ffb496"
+            navigation={navigation}
           />
+          <RandomWord />
+          <Timer name="Voice Memos" time="04:20:32" />
         </View>
-        <FlashLight />
       </ScrollView>
     </>
   );
@@ -25,7 +26,7 @@ const DemoTittle = () => {
 const styles = StyleSheet.create({
   main: {
     padding: 10,
-    flex:1,
+    flex: 1,
     backgroundColor: 'white',
   },
 });
