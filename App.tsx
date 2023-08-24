@@ -9,6 +9,7 @@ import DemoTittle from './components/DemoTittle';
 import AllCards from './components/AllCards';
 import AllVoiceMemo from './components/AllVoiceMemo';
 import AddNotes from './components/AddNotes';
+import Loader from './components/Loader';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,11 @@ function App(): JSX.Element {
     <>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen
+            name="loader"
+            component={Loader}
+            options={{headerShown: false}}
+          />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Timer" component={Timer} />
