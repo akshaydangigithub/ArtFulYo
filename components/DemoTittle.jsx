@@ -1,5 +1,5 @@
 import {Text, View, StyleSheet} from 'react-native';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import {ScrollView} from 'react-native-gesture-handler';
 import Card from './CardMain';
 import Timer from './Timer';
 import RandomWord from './RandomWord';

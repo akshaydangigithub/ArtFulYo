@@ -1,15 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
-import { useEffect } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StyleSheet,
-  Image,
-  Button,
-  ActivityIndicator,
-} from 'react-native';
+import {useEffect} from 'react';
+import {View, StyleSheet, Image, ActivityIndicator} from 'react-native';
 
 const Loader = () => {
   const navigation = useNavigation();

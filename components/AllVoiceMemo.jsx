@@ -1,5 +1,5 @@
 import {Text, View, StyleSheet} from 'react-native';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import {ScrollView} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const strips = [
@@ -114,7 +114,6 @@ const AllVoiceMemo = () => {
               </View>
             ))}
         </View>
-        
       </ScrollView>
     </View>
   );

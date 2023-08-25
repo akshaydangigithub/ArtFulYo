@@ -41,9 +41,9 @@ const VoiceMemo = ({navigation}) => {
           strips.map((strip, index) => (
             <View key={index} style={styles.strip}>
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <View style={styles.icon_div}>
-                    <Icon name="storefront-outline" color="black" size={26} />
-                  </View>
+                <View style={styles.icon_div}>
+                  <Icon name="storefront-outline" color="black" size={26} />
+                </View>
                 <View style={styles.voice_memo_main}>
                   <Text style={styles.voice_memo}>
                     {strip.heading} {index + 1}
@@ -119,14 +119,14 @@ const styles = StyleSheet.create({
     color: '#7a7a7a',
     marginRight: 10,
   },
-  icon_div:{
-    height:35,
-    width:35,
-    backgroundColor:"royalblue",
+  icon_div: {
+    height: 35,
+    width: 35,
+    backgroundColor: 'royalblue',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius:20
-  }
+    borderRadius: 20,
+  },
 });
 
 export default VoiceMemo;
